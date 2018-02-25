@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/many2manybi</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.connection.pool_size">1</property>
+       <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hbm2ddl.auto">create-drop</property>
+        
+        <!--  One to One Demo Unidirectional -->
+      <!--   <mapping class="com.demo.mappingdemo.Department" />
+        <mapping class="com.demo.mappingdemo.Studen" /> -->
+        
+        <!--  One to One Demo Bidirectional -->
+        <!-- <mapping class="com.demo.mappingdemo.Department2" />
+        <mapping class="com.demo.mappingdemo.Studen2" /> -->
+        
+         <!--  Many  to Many Demo Unidirectional -->
+        <!--  <mapping class="com.demo.mappingdemo.Subject" />
+        <mapping class="com.demo.mappingdemo.Student5" /> -->
+        
+          <!--  Many  to Many Demo Unidirectional -->
+         <mapping class="com.demo.mappingdemo.Subject1" />
+        <mapping class="com.demo.mappingdemo.Student6" />
+        
+      <!-- <mapping resource="employee.hbm.xml" />  -->    
+      <!-- <mapping class="com.demo.one2oneuni.Address" />
+       <mapping class="com.demo.one2oneuni.Student" /> -->
+       
+       <!-- Native Query Demo -->
+ 	  <!--  <mapping class="com.demo.mappingdemo.Stock" /> -->
+ 	  
+ 	   <!-- One to Many Demo -->
+      <!--  <mapping class="com.demo.mappingdemo.Employer" />
+       <mapping class="com.demo.mappingdemo.Emp" /> -->
+       
+        <!--  Many  to One Demo Unidirectional -->
+      <!--  <mapping class="com.demo.mappingdemo.Aaddress" />
+       <mapping class="com.demo.mappingdemo.Sstudent" /> -->
+       
+        <!--  Many  to One Demo Bidirectional -->
+      <!--  <mapping class="com.demo.mappingdemo.Aaddress1" />
+       <mapping class="com.demo.mappingdemo.Sstudent1" /> -->
+       
+       
+       
+    </session-factory>
+</hibernate-configuration>
